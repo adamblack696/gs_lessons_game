@@ -3,7 +3,9 @@
 const numberGuess = () => {
 
 	let randomFunc = () => {
-		return Math.floor(Math.random() * 100 + 1);
+		const random = Math.floor(Math.random() * 100 + 1);
+		console.log(random);
+		return random;
 	}
 
 	const isNumber = (a) => {
@@ -22,13 +24,13 @@ const numberGuess = () => {
 			return false;
 		} else if(a > number) {
 			alert('Загаданное число меньше');
-			numberGuess()();
+			compaireNumber();
 		} else if(a < number) {
 			alert('Загаданное число больше');
-			numberGuess()();
+			compaireNumber();
 		} else if(!isNumber(a)){
 			alert('Введи число!');
-			numberGuess()();
+			compaireNumber();
 		}
 	}
 }
