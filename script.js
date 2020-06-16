@@ -1,19 +1,19 @@
 'use strict';
 
-const numberGuess = () => {
+let randomFunc = () => {
+	return Math.floor(Math.random() * 100 + 1);
+}
 
-	let randomFunc = () => {
-		const random = Math.floor(Math.random() * 100 + 1);
-		console.log(random);
-		return random;
-	}
+const numberGuess = () => {
 
 	const isNumber = (a) => {
 		return !isNaN(parseInt(a)) && isFinite(a);
 	}
 
+	let number = randomFunc();
+	console.log(number);
+
 	return () => {
-		let number = randomFunc();
 		let a = prompt('Угадай число от 1 до 100', '');
 
 		if(+a === number) {
